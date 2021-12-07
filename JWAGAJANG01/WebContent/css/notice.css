@@ -1,0 +1,63 @@
+section {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.pagenav {
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+.navarrow {
+    margin: 0 7px 0 7px;
+    padding: 6px;
+    background: url(img/navarrow.svg) no-repeat;
+    background-position: 0px;
+}
+
+.notice {
+    text-align: center;
+    margin: 0 auto;
+    width: 953px;
+}
+
+h1 {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 40px 0 50px 0;
+}
+
+.brdbox {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 40px;
+    border: #00000026 solid 0.5px;
+    border-width: 0.5px 0px;
+    /* 테두리 두깨 : 위아래, 양옆 */
+}
+
+.brdbox :nth-child(1) {
+    width: 105.83px;
+}
+
+.brdbox :nth-child(2) {
+    width: 604px;
+}
+
+.brdbox :nth-child(3) {
+    width: 137px;
+}
+
+.brdbox :nth-child(4) {
+    width: 105.83px;
+}
+
+.writebtn {
+    float: right;
+    width: 52px;
+    line-height: 23px;
+    color: white;
+    background: #195500;
+    border: 0;
+    margin: 10px 0;
+}
