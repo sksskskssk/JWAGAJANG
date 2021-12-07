@@ -83,7 +83,7 @@ public class MemberFrontController extends HttpServlet{
 		//10-1. 로그인처리
 		}else if(command.equals("/MemberLoginAction.me")){
 			//10-2. MemberLoginAction.java 생성
-			action = new MemberLoginAction();
+			//action = new MemberLoginAction();
 			try {
 				System.out.println("@@@@ Controller : MembeLoginAction 객체생성완료 후 excute()호출완료");
 				forward = action.execute(req, resp);
