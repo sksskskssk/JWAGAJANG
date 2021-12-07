@@ -22,6 +22,7 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
+	color: #707070;
 	vertical-align: baseline;
 	font-family: 'Nanum Gothic', sans-serif;
 }
