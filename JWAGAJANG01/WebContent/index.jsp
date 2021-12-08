@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/header_footer.css">
     <link rel="shortcut icon" href="img/favicon/favicon.ico">
     <link rel="stylesheet" href="css/swiper-bundle.css">
     <link rel="stylesheet" href="css/index.css">
@@ -52,8 +53,7 @@
       <span class="price">2,200원</span></p>
       </div>
     </div>
-   
-
+    
       <div class="newTitle">
         <h1>NEW</h1><p><a href="#"> 더보기 > </a></p>
       </div>
@@ -82,7 +82,6 @@
   </div>
 <jsp:include page="H&F/footer.html"/>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="js/jquery.min.js"></script>
     <script src="js/index.js"></script>
 </body>
 </html>
