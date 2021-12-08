@@ -147,3 +147,15 @@
     width: 40px;
     height: 40px;
   }
+  
+  .loginInfoBox {
+  	position: absolute; 
+  	right: 1px; 
+  	display:flex; 
+  	align-items: center;
+  }
+  
+  .logoutBtn {
+  	margin-left: 15px;
+  	
+  }

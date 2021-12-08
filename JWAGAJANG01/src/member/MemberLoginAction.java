@@ -20,7 +20,9 @@ public class MemberLoginAction implements Action {
 		MemberDAO mdao = new MemberDAO();
 		int check = mdao.idCheck(id, pw);
 		
-		System.out.println("@@@@ Action : 페이지이동 "+check);		
+		System.out.println("@@@@ Action : 페이지이동 "+check);
+		System.out.println(id);
+		System.out.println(pw);
 		
 		if(check == 0){
 			resp.setContentType("text/html; charset=UTF-8");
@@ -44,6 +46,7 @@ public class MemberLoginAction implements Action {
 		if (check == 1){
 			HttpSession session = req.getSession(); 
 			session.setAttribute("id", id);
+			System.out.println("로그인 된 id : " + id);
 		}
 		
 		ActionForward forward = new ActionForward();

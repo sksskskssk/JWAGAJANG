@@ -20,7 +20,7 @@
   <!-- 본문 -->
   <div class="container-fluid bg d-flex mt-3">
   	<div class="container d-flex justify-content-center" id="bg-white-join">
-      <form  method="post" action="./MemberJoinAction.me" name="fr" onsubmit="return checkAll()">
+      <form  method="post" action="./MemberJoinAction.me" name="fr" onsubmit="checkAll()">
         <h5 class="lfb" style="text-align: center; margin-top: 38px; font-size: 20px/23px;">회원가입</h5>
         <div class="container row d-flex mt-5" style="margin-top: 13px;">
           <div class="col-md-3 d-flex align-items-center">
@@ -30,7 +30,7 @@
             <input class="join-label-font lib lis py-3 ps-3 cfs" name="id" type="text" placeholder="아이디를 입력하세요.">
           </div>
           <div class="col-md-2 d-flex align-items-center">
-            <input class="join-button-font btn jbs cfs" type="button" value="중복확인">
+            <input class="join-button-font btn jbs cfs" type="button" value="중복확인" onclick="checkPw()">
           </div>
         </div>
         <div class="container row d-flex">
@@ -104,7 +104,7 @@
   <script src="js/index.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="js/joinChk"></script>
+  <script src="js/joinChk.js"></script>
   
 </body>
 </html>

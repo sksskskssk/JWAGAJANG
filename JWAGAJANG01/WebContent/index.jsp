@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -14,7 +16,8 @@
     <title>좌가장</title>
 </head>
 <body>
-<jsp:include page="H&F/header.html"/>
+
+<jsp:include page="H&F/header.jsp"/>
     <!--슬라이더 영역-->
     <div class="swiper">
       <div class="swiper-wrapper">

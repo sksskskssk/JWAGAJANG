@@ -72,12 +72,12 @@ public class MemberDAO {
 		int result = -1;
 		try {
 			con = getCon();
-			sql = "select PASSWORD from user where ID=?;";
+			sql = "select PASSWORD from user where ID=?";
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, id);
 			rs = pstmt.executeQuery();
 			if(rs.next()){
-				if(pw.equals(rs.getString("pw"))){
+				if(pw.equals(rs.getString("PASSWORD"))){
 					result = 1;
 				}else{
 					result = 0;
@@ -88,7 +88,9 @@ public class MemberDAO {
 			System.out.println("@@@@ DAO : 로그인처리완료 "+result);
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
+		} 
+		//상관없이 무조건 실행
+		finally {
 			closeDB();
 		}
 		return result;
