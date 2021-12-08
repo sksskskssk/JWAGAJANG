@@ -10,6 +10,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/notice.css">
+  <link rel="stylesheet" href="css/header_footer.css">
 <title>좌가장 : 공지사항</title>
 
 </head>
