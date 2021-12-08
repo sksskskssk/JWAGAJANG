@@ -15,7 +15,7 @@
 </head>
 <body>
 <!-- 헤더영역 -->
-  <jsp:include page="H&F/header.html"/>
+  <jsp:include page="H&F/header.jsp"/>
 <!-- 섹션 영역 -->
 	<section>
 		<div class="pagenav">

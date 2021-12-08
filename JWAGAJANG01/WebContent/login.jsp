@@ -19,7 +19,7 @@
 <body>
 
   <!-- 헤더 -->
-  <jsp:include page="H&F/header.html"/>
+  <jsp:include page="H&F/header.jsp"/>
   <!--  본문 -->
   <div class="container-fluid bg d-flex mt-3">
   	<div class="container d-flex justify-content-center" id="bg-white">

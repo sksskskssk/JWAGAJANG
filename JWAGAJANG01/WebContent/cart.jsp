@@ -11,7 +11,7 @@
 <title>장바구니</title>
 </head>
 <body>
-<jsp:include page="H&F/header.html"/>
+<jsp:include page="H&F/header.jsp"/>
     <div class="pagenav">홈<span class="navarrow"></span>장바구니</div>
     <div id="cartwrap">
     	<h1>장바구니</h1>

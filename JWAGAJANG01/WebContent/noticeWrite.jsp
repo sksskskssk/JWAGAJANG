@@ -16,7 +16,7 @@
 </head>
 
 <body>
-  <jsp:include page="H&F/header.html"/>
+  <jsp:include page="H&F/header.jsp"/>
 	<section>
 		<div class="pagenav">
 			홈<span class="navarrow"></span>게시판<span class="navarrow"></span>공지사항

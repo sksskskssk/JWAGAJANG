@@ -9,7 +9,6 @@ String id = (String)session.getAttribute("id");
 <c:if test="${not empty id}">
 <div class="loginInfoBox">
 	<p>${id} 님 안녕하세요!</p>
-	<input class="logoutBtn" type="button" name="logout" value="로그아웃">
 </div>
 </c:if>
 
@@ -23,9 +22,25 @@ String id = (String)session.getAttribute("id");
         </form>
         <nav>
           <ul class="gnbmy">
+            <c:set var="loginChk" value="${id}" />
+            <c:if test="${empty id}">
             <li><a href="./MemberLogin.me">로그인</a></li>
+            </c:if>
+            <c:if test="${not empty id}">
+            <li><a href="./MemberLogout.me">로그아웃</a></li>
+            </c:if>
+            <c:if test="${empty id}">
+            <li><a href="./MemberLogin.me">장바구니</a></li>
+            </c:if>
+            <c:if test="${not empty id}">
             <li><a href="#">장바구니</a></li>
+            </c:if>
+            <c:if test="${empty id}">
+            <li><a href="./MemberJoin.me">회원가입</a></li>
+            </c:if>
+            <c:if test="${not empty id}">
             <li><a href="#">마이페이지</a></li>
+            </c:if>
           </ul>
         </nav>
         <nav>
