@@ -43,7 +43,7 @@ public class MemberDAO {
 			//3-1. DB연결메서드 불러오기
 			con = getCon();
 			//3-2. SQL & pstmt 생성 & 실행
-			sql = "insert into tutorial_member value(?,?,?,?,?,?,?,?)";
+			sql = "insert into user values(?,?,?,?,?,?,?,?)";
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, mb.getId());
 			pstmt.setString(2, mb.getPw());
@@ -67,5 +67,30 @@ public class MemberDAO {
 			//자원해제로 DB 효율성을 높일수있다.
 			closeDB();
 		}
+	}
+	public int idCheck(String id, String pw){
+		int result = -1;
+		try {
+			con = getCon();
+			sql = "select PASSWORD from user where ID=?;";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, id);
+			rs = pstmt.executeQuery();
+			if(rs.next()){
+				if(pw.equals(rs.getString("pw"))){
+					result = 1;
+				}else{
+					result = 0;
+				}
+			}else{
+				result = -1;
+			}	
+			System.out.println("@@@@ DAO : 로그인처리완료 "+result);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			closeDB();
+		}
+		return result;
 	}
 }
