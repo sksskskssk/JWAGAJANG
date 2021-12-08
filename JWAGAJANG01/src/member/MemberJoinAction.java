@@ -6,16 +6,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class MemberJoinAction implements Action {
-
+	
+	//action 인터페이스의 execute 함수 재정의해서 사용
 	@Override
 	public ActionForward execute(HttpServletRequest req, HttpServletResponse resp) throws Exception {
 		System.out.println("MemberJoinAction안의 execute() 실행됨");
+		
+		//request객체를 이용해 jsp를 통해 값을 받을때 한글에 대한 처리를 해줘야함.
 		req.setCharacterEncoding("UTF-8");
 		
 		//MemberBean 객체 생성후 데이터베이스로부터 정보저장
 		MemberBean mb = new MemberBean();
 		mb.setId(req.getParameter("id"));
-		mb.setPw(req.getParameter("pw"));
+		mb.setPw(req.getParameter("password"));
 		mb.setEmail(req.getParameter("email"));
 		mb.setContact(req.getParameter("contact"));
 		mb.setAddress1(req.getParameter("address1"));

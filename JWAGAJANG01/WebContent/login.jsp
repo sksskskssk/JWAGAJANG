@@ -24,7 +24,7 @@
         <input class="lib d-block lis mt-4 py-3 ps-3 cfs"  type="text" placeholder="아이디">
         <input class="lib d-block lis py-3 ps-3 mt-2 cfs" type="password" placeholder="비밀번호">
         <input class="lib d-block btn btn-login cfs" style="margin-top: 27px;" type="submit" value="LOGIN">
-        <a class="lib d-block btn mt-2 jbs cfs d-flex justify-content-center align-items-center" href="join.jsp">회원가입</a>
+        <a class="lib d-block btn mt-2 jbs cfs d-flex justify-content-center align-items-center" href="./MemberJoin.me">회원가입</a>
       </form>
   	</div>
   </div>

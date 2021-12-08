@@ -36,11 +36,11 @@ public class MemberFrontController extends HttpServlet{
 			System.out.println("/MemberJoin.me 호출");
 			
 			forward = new ActionForward();
-			forward.setPath("join.jsp");
+			forward.setPath("./join.jsp");
 			forward.setRedirect(false); 
 		}else if(command.equals("/MemberJoinAction.me")){ 
 			System.out.println("/MemberJoinAction.me 주소 호출");
-
+			
 			action = new MemberJoinAction();
 			try {
 				System.out.println("@@@@ Controller : MemberJoinAction 객체생성완료 후 excute()호출완료");
@@ -51,7 +51,7 @@ public class MemberFrontController extends HttpServlet{
 			}
 		}else if(command.equals("/MemberLogin.me")){
 			forward = new ActionForward();
-			forward.setPath("login.jsp");
+			forward.setPath("./login.jsp");
 			forward.setRedirect(false);
 		}else if(command.equals("/MemberLoginAction.me")){
 			action = new MemberLoginAction();
@@ -64,8 +64,9 @@ public class MemberFrontController extends HttpServlet{
 			}
 			//메인페이지
 		}else if(command.equals("/Main.me")){ 
+			System.out.println("Main.me 입력받음");
 			forward = new ActionForward();
-			forward.setPath("index.jsp");
+			forward.setPath("./index.jsp");
 			forward.setRedirect(false);
 			try {
 				forward =  action.execute(req, resp);

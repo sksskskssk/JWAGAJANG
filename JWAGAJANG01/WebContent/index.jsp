@@ -13,7 +13,7 @@
     <title>좌가장</title>
 </head>
 <body>
-<jsp:include page="header.jsp"/>
+<jsp:include page="H&F/header.html"/>
     <!--슬라이더 영역-->
     <div class="swiper">
       <div class="swiper-wrapper">
