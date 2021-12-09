@@ -69,6 +69,11 @@
     padding: 0 56px;
     color: #272727;
   }
+  .gnbmy>li>a {
+    text-decoration: none;
+    color: #707070;
+    font-weight: bold;
+  }
 
   .gnb>li:first-of-type {
     padding-left: 0;
