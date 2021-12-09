@@ -57,6 +57,7 @@ h1 {
 	font-weight: bold;
 	font-size: 14px;
 	line-height: 40px;
+	border-spacing: 0;
 }
 .brdViewbox :nth-child(1) {
 	width: 105.83px;
