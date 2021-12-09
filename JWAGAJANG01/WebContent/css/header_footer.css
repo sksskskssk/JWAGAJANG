@@ -1,6 +1,6 @@
  /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~PC용 CSS~~~~~~~~~~~~~~~~~~~~~~~~~~ */
  /*header CSS*/
- header {
+  #top {
     width: 100%;
     padding-top: 52.24px;
     border-bottom: #E6E6E6 1px solid;
@@ -18,7 +18,7 @@
     height: fit-content;
     align-items: center;
   }
-  .logo a img {
+  .logo_img {
     width: 150px;
     height: 73px;
   }
@@ -40,11 +40,11 @@
     right: 14.51px;
     top: 6.76px;
   }
-  nav ul{
+  .gnb{
     padding-left: 0;
     margin: 0;
   }
-  nav>ul>li>a {
+  .ctgry {
     text-decoration: none;
     color: #707070;
     font-weight: bold;
@@ -62,15 +62,14 @@
     flex-direction: row;
     position: relative;
   }
-  .gnb>li {
+  .gnb_li {
     box-sizing: content-box;
     margin-top: 18px ;
     margin-bottom: 18px;
     padding: 0 56px;
-  }
-  .gnb>li>a {
     color: #272727;
   }
+
   .gnb>li:first-of-type {
     padding-left: 0;
     margin:0;
@@ -92,21 +91,28 @@
     width: fit-content;
     font-size: 13px;
     font-weight: bold;
+    border-collapse: collapse;
   }
-  .lnb>tr,th,td {
+  .lnb_tr {
     padding: 8px;
     border: 0.25px solid #E6E6E6;
   }
-  .lnb td {
+   .lnb_th {
+    padding: 8px;
+    border: 0.25px solid #E6E6E6;
+  }
+   .lnb_td {
+    padding: 8px;
+    border: 0.25px solid #E6E6E6;
     padding: 9px 21px 8px 21px;
   }
-  .lnb td>a {
+  .lnb_td>a {
     font-size: 12px;
     text-decoration: none;
     font-weight: normal;
     color: #707070;
   }
-  .cate a{
+  .cate>a{
     font-weight: normal !important;
     color: #707070 !important;
   }
@@ -118,6 +124,8 @@
     margin-top: 50px;
     width: 100%;
     background-color: #F1F1F1;
+    position:absolute;
+  	bottom:0;
   }
  .footerwrap {
     display:flex;  
