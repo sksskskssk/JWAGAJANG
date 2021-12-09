@@ -1,5 +1,6 @@
 package member;
 
+import java.io.PrintWriter;
 import java.sql.Timestamp;
 
 import javax.servlet.http.HttpServletRequest;
@@ -27,15 +28,44 @@ public class MemberJoinAction implements Action {
 		mb.setReg_date(new Timestamp(System.currentTimeMillis()));
 		System.out.println("@@@@ Action : 전달받은 정보 MemberBean 객체 확인"+mb);
 		
+		String id = req.getParameter("id");
+		
 		//DB로부터 가져온 정보를 처리하기 위한 DAO객체 생성
 		MemberDAO mdao = new MemberDAO();
-		mdao.insertMember(mb);
-		System.out.println("@@@@ Action : 디비작업처리완료");
+		MemberDAO iddupcheck = new MemberDAO();
+		if(iddupcheck.idDupCheck(id) == -1) {
+			resp.setContentType("text/html; charset=UTF-8");
+			PrintWriter out = resp.getWriter();
+			out.print("<script>");
+			out.print("alert('아이디 중복체크를 해주세요.');");
+			out.print("history.back();");
+			out.print("</script>");
+			out.close();
+		}else if(iddupcheck.idDupCheck(id) == 0) {
+			mdao.insertMember(mb);
+			resp.setContentType("text/html; charset=UTF-8");
+			PrintWriter out = resp.getWriter();
+			out.print("<script>");
+			out.print("alert('회원가입을 축하드립니다.');");
+			out.print("</script>");
+			out.close();
+			ActionForward forward = new ActionForward();
+			forward.setPath("./MemberLogin.me");
+			forward.setRedirect(true);
+			return forward;
+		}else if(iddupcheck.idDupCheck(id) == 1) {
+			resp.setContentType("text/html; charset=UTF-8");
+			PrintWriter out = resp.getWriter();
+			out.print("<script>");
+			out.print("alert('이미 사용중인 아이디 입니다.');");
+			out.print("history.back();");
+			out.print("</script>");
+			out.close();
+		}
 		
-		System.out.println("@@@@ Action : 페이지이동");
 		ActionForward forward = new ActionForward();
-		forward.setPath("./MemberLogin.me");
-		forward.setRedirect(true);
+		forward.setPath("./MemberJoin.me");
+		forward.setRedirect(false);
 		return forward;
 	}
 

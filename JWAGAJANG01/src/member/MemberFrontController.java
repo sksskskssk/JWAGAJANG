@@ -81,6 +81,14 @@ public class MemberFrontController extends HttpServlet{
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
+		}else if(command.equals("/MemberIdCheck.me")) {
+			System.out.println("아이디 중복체크");
+			action = new MemberIdCheck();
+			try {
+				forward = action.execute(req, resp);
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
 		}
 		//forward에 담아놓은 path,Redirect 값을 검사하여 실질적으로 페이지이동을 시키는 부분
 		//1.forward가 null이 아닌지를 먼저 체크한다.

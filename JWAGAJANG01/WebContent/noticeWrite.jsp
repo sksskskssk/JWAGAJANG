@@ -15,7 +15,6 @@
 <title>좌가장 : 공지사항</title>
 </head>
 <body>
-<!-- 헤더영역   -->
   <jsp:include page="H&F/header.jsp"/>
 	<section>
 		<div class="pagenav">
