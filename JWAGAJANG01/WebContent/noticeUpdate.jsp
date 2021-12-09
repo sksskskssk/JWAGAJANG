@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html lang="ko">
@@ -15,45 +15,47 @@
 <title>좌가장 : 공지사항</title>
 </head>
 <body>
-	<!-- 헤더영역    -->
-	<jsp:include page="H&F/header.jsp" />
-
+<!-- 헤더영역   -->
+  <jsp:include page="H&F/header.jsp"/>
 	<section>
 		<div class="pagenav">
 			홈<span class="navarrow"></span>게시판<span class="navarrow"></span>공지사항
 		</div>
 		<div class="notice">
 			<h1>공지사항</h1>
-			<table>
-				<tr class="brdViewbox">
-					<th>${board.notice_label}</th>
-					<th>${board.notice_title}</th>
-					<th>${board.notice_regdate}</th>
-					<th>${board.notice_count}</th>
+			<form name="frm" method="post" action="noticeUpdate.do">
+			<table class="brdWritebox">
+				<tr>
+					<th width="150px">구분</th>
+					<th>
+						<select class="sortinput" name="sort">
+							<option>선택해주세요.</option>
+							<option>공지</option>
+							<option>이벤트</option>
+						</select>
 				</tr>
 				<tr>
-					<td><pre>${board.content}</pre></td>
+					<th width="150px">제목</th>
+					<th><input class="titleinput" type="text" name="sort" value="${board.notice_title}"></th>
+				</tr>
+				<tr>
+					<th id="textarea">본문</th>
+					<th><textarea style="resize: none;" name="text">>${board.notice_content}</textarea></th>
 				</tr>
 			</table>
-			<div class="list">
-				<input type="submit" value="수정" name="update" class="upbtn"
-					onclick="location.href='noticeWrite.do'"> <input
-					type="submit" value="삭제" name="delete" class="delbtn"> <input
-					type="submit" value="목록" name="list" class="listbtn"
-					onclick="location.href='noticeList.do'">
+			
+			<div class="noticeWritebtn">
+				<input type="submit" value="수정" name="send" class="sendbtn"  onclick="return noticeCheck()">
+				<input type="submit" value="목록" name="noticelist" class="noticelistbtn">
 			</div>
-		</div>
-		<div class="paging">
-			<span class="prev"></span> <span class="next"></span>
-		</div>
-		<div class="noticeSrc">
-			<input class="searchtext" type="text" name="search"> <input
-				class="searchbtn" value="찾기" type="button">
+			</form>
 		</div>
 	</section>
+	<!-- 푸터영역 -->
 	<jsp:include page="H&F/footer.html" />
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/index.js"></script>
+	<script src="js/notice.js"></script>
 </body>
 </html>
