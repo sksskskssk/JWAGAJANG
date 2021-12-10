@@ -15,9 +15,14 @@
 <title>좌가장 : 공지사항</title>
 </head>
 <body>
+<<<<<<< HEAD
+<div id="pagewrap">
+  <jsp:include page="H&F/header.jsp"/>
+=======
 	<!-- 헤더영역    -->
 	<jsp:include page="H&F/header.jsp" />
 
+>>>>>>> 583e12e98cf1571ab5264c0b61b951e6e2c809eb
 	<section>
 		<div class="pagenav">
 			홈<span class="navarrow"></span>게시판<span class="navarrow"></span>공지사항
@@ -51,7 +56,12 @@
 				class="searchbtn" value="찾기" type="button">
 		</div>
 	</section>
+<<<<<<< HEAD
+	<jsp:include page="H&F/footer.jsp"/>
+</div>
+=======
 	<jsp:include page="H&F/footer.html" />
+>>>>>>> 583e12e98cf1571ab5264c0b61b951e6e2c809eb
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/index.js"></script>
