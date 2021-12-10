@@ -25,7 +25,7 @@ public class MemberFrontController extends HttpServlet{
 		System.out.println("contextPath: "+ contextPath);
 		
 		String command = requestURI.substring(contextPath.length());
-		System.out.println("잘 짤렸는지 가상주소 command: "+command);
+		System.out.println("잘 짤렸는지 가상주소 command: "+ command);
 
 		//여러번 쓸 수 있게 처리.
 		//if문이 처리가 안 될 시 null로 미리 선언을 해놓고 null을 반환함으로써 따로 처리를 할 수 있음.

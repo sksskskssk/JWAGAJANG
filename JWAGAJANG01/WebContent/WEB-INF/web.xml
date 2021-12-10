@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
   <display-name>JWAGAJANG01</display-name>
+ 
 	<servlet>
 	<servlet-name>MemberFrontController</servlet-name>
 	<servlet-class>member.MemberFrontController</servlet-class>
@@ -9,6 +10,7 @@
 	<servlet-name>MemberFrontController</servlet-name>
 	<url-pattern>*.me</url-pattern> 
 	</servlet-mapping>
+<<<<<<< HEAD
 	<servlet>
 	<servlet-name>NoticeFrontController</servlet-name>
 	<servlet-class>board.NoticeHandlerURI</servlet-class>
@@ -24,3 +26,7 @@
 </web-app>
 
 <!-- 설정파일을 수정하면 톰캣 다시 구동 -->
+=======
+	
+</web-app>
+>>>>>>> main
