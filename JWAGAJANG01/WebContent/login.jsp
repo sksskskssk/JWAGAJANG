@@ -17,11 +17,10 @@
   <title>좌가장</title>
 </head>
 <body>
-<div id="pagewrap">
+
   <!-- 헤더 -->
   <jsp:include page="H&F/header.jsp"/>
   <!--  본문 -->
-  <section>
   <div class="container-fluid bg d-flex mt-3">
   	<div class="container d-flex justify-content-center" id="bg-white">
       <form  method="post" action="./MemberLoginAction.me">
@@ -33,10 +32,9 @@
       </form>
   	</div>
   </div>
-</section>
+
   <!-- 푸터 -->
-<jsp:include page="H&F/footer.jsp"/>
-</div>
+<jsp:include page="H&F/footer.html"/>
   <script src="js/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
