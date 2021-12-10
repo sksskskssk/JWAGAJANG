@@ -86,13 +86,22 @@ public class ControllerUsingURI extends HttpServlet {
 	
 	private void process(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String command = req.getRequestURI();
-		if(command.indexOf(req.getContextPath()) == 0) {
-			command = command.substring(req.getContextPath().length());
-		}
+		System.out.println("요청된 URI: "+command);
+		System.out.println("컨텍스트패스: "+req.getContextPath());
+		System.out.println(command.indexOf(req.getContextPath()) == 0);
+		
+		// uri에서 프로젝트이름을 포함한 컨텍스트패스
+		/*
+		 * if(command.indexOf(req.getContextPath()) == 0) { command =
+		 * command.substring(req.getContextPath().length()); }
+		 */
+		
+		 
 		CommandHandler handler = commandHandlerMap.get(command);
 		if(handler == null) {	// 매핑 테이블에 없을 경우 (정의되지 않은 command일 경우)
 			handler = new NullHandler();
 		}
+		//요청된URI를 HashMap에 저장되있는 Key값으로 활용하여 Value에 저장돼있는 핸들러객체의 process함수를 실행한다. 
 		String viewPage = null;
 		try {
 			viewPage = handler.process(req, resp);

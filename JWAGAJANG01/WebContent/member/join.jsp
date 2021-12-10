@@ -17,7 +17,7 @@
 </head>
 <body>
   <!-- 헤더 -->
-  <jsp:include page="H&F/header.jsp"/>
+  <jsp:include page="../H&F/header.jsp"/>
   <!-- 본문 -->
   <div class="container-fluid bg d-flex mt-3">
   	<div class="container d-flex justify-content-center" id="bg-white-join">
@@ -109,7 +109,7 @@
   </div>
 
   <!-- 푸터 -->
-<jsp:include page="H&F/footer.html"/>
+<jsp:include page="../H&F/footer.html"/>
   <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script>
 function sample4_execDaumPostcode() {
