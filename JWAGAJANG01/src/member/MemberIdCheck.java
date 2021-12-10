@@ -11,13 +11,14 @@ public class MemberIdCheck implements Action{
 	public ActionForward execute(HttpServletRequest req, HttpServletResponse resp) throws Exception {
 		System.out.println("ID중복체크 execute() 호출");
 		
+		
 		req.setCharacterEncoding("UTF-8");
 		
 		String id = req.getParameter("id");
 		
 		MemberDAO mdao = new MemberDAO(); // 데이터베이스에 Access하기 위해 DAO객체 생성
 		int check = mdao.idDupCheck(id);
-		System.out.println("iddupcheck반환값: " + mdao.idDupCheck(id));
+		
 		
 		if(check == 1) {
 			resp.setContentType("text/html; charset=UTF-8");

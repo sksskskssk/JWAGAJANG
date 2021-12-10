@@ -22,7 +22,6 @@ String id = (String)session.getAttribute("id");
         </form>
         <nav>
           <ul class="gnbmy">
-            <c:set var="loginChk" value="${id}" />
             <c:if test="${empty id}">
             <li><a href="./MemberLogin.me">로그인</a></li>
             </c:if>
