@@ -1,4 +1,4 @@
-package board;
+package controller;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -16,17 +16,23 @@ import javax.servlet.http.HttpServletResponse;
 import common.command.CommandHandler;
 import common.command.NullHandler;
 
-public class NoticeHandlerURI extends HttpServlet {
+public class ControllerUsingURI extends HttpServlet {
+	//직렬화하는 과정에서 값을 체크하는 용도로 serialVersionUID를 사용함.
+	//직렬화를 할때 UID를 같이 저장해서 역직렬화할시에 UID를 체크해서 다르면 예외가 발생한다.
 	private static final long serialVersionUID = 1L;
-	// cmd와 Handler 인스턴스 매핑 정보 저장
-	// 브라우저에서 cmd가 요청이 되면 그것을 처리하는 핸들러 인스턴스를 생성을 해서 저장
+	// command와 Handler 인스턴스 매핑 정보 저장
+	// 브라우저에서 command가 요청이 되면 그것을 처리하는 핸들러 인스턴스를 생성을 해서 저장
 	private Map<String, CommandHandler> commandHandlerMap = new HashMap<>();
 	
-	// 서블릿이 맨처음에 구동되는 불리는 메소드
+	// init메소드는 HttpServlet의 부모추상클래스인 GenericServlet에 존재하는 메소드이다. 클라이언트로부터 최초요청시 WAS에서 SERVLET으로 객체생성을 요청하며 딱 한번만 실행된다.
+	// init메소드가 호출 될 때 ServletConfig를 자동으로 생성하여 넘겨줌.
+	// web.xml에서 필요에 따라 입력한 파라미터 값들을 가져옴.
+	// 그래서 web.xml에서 변경사항이 있을 시 서버를 재시작해서 서블릿객체를 새로 생성해야 함.
 	@Override
 	public void init() throws ServletException {
-		// web.xml에서 설정된 commandHandler.properties 파일을 이름을 얻어온다.
+		// 매개변수로 web.xml에서 지정했던 param-name을 넘겨주면 그에 해당하는 값을 가져온다.
 		String configFile = getInitParameter("configFile");
+		//Properties 객체는 Key와 Value를 쌍으로 저장하는데, 환경설정 정보가 저장된 .properties파일의 내용을 읽어들일 때 사용된다.
 		Properties prop = new Properties();
 		// commandHandler.properties 파일의 절대경로를 가져온다.
 		String configFilePath = getServletContext().getRealPath(configFile);
