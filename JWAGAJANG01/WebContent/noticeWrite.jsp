@@ -15,7 +15,6 @@
 <title>좌가장 : 공지사항</title>
 </head>
 <body>
-<div id="pagewrap">
   <jsp:include page="H&F/header.jsp"/>
 	<section>
 		<div class="pagenav">
@@ -53,13 +52,8 @@
 			</form>
 		</div>
 	</section>
-<<<<<<< HEAD
-	<jsp:include page="H&F/footer.jsp"/>
-</div>
-=======
 	<!-- 푸터영역 -->
 	<jsp:include page="H&F/footer.html" />
->>>>>>> 583e12e98cf1571ab5264c0b61b951e6e2c809eb
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/index.js"></script>
