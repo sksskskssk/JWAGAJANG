@@ -11,7 +11,9 @@
 <title>장바구니</title>
 </head>
 <body>
+<div id="pagewrap">
 <jsp:include page="H&F/header.jsp"/>
+	<section>
     <div class="pagenav">홈<span class="navarrow"></span>장바구니</div>
     <div id="cartwrap">
     	<h1>장바구니</h1>
@@ -51,8 +53,16 @@
     		<div class="pricelist"><span class="pricedesc">총 주문금액</span><br />
     		<span class="price">1,760원</span></div>
     	</div>
+    	<div class="buttonsec">
+    	<div class="btnsecL"><input type="button" class="normalbtn" value="선택삭제" />
+    	<input type="button" class="normalbtn" value="찜하기" /></div>
+    	<div class="btnsecR"><input type="button" class="colorbtn" value="선택 상품 주문하기" />
+    	<input type="button" class="normalbtn" value="계속 쇼핑하기" /></div>
+    	</div>
     	</form>
     </div>
-<jsp:include page="H&F/footer.html"/>
+  	</section>
+<jsp:include page="H&F/footer.jsp"/>
+</div>
 </body>
 </html>

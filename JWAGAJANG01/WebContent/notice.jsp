@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/header_footer.css">
 </head>
 <body>
+<div id="pagewrap">
 <!-- 헤더영역 -->
   <jsp:include page="H&F/header.jsp"/>
 <!-- 섹션 영역 -->
@@ -44,10 +45,11 @@
 		</div>
 	</section>
 	<!-- 푸터영역 -->
-	<jsp:include page="H&F/footer.html"/>
+	<jsp:include page="H&F/footer.jsp"/>
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/index.js"></script>
+</div>
 </body>
 
 </html>

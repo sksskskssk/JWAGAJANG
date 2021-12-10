@@ -16,6 +16,7 @@
 </head>
 
 <body>
+<div id="pagewrap">
   <jsp:include page="H&F/header.jsp"/>
 	<section>
 		<div class="pagenav">
@@ -45,7 +46,8 @@
 			<input class = "searchbtn" value="찾기" type="button" >
 		</div>
 	</section>
-	<jsp:include page="H&F/footer.html"/>
+	<jsp:include page="H&F/footer.jsp"/>
+</div>
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/index.js"></script>

@@ -12,6 +12,7 @@
     <title>좌가장</title>
 </head>
 <body>
+<div id="pagewrap">
     <!-- 헤더 -->
     <jsp:include page="H&F/header.jsp"/>
     <!--  본문 -->
@@ -68,7 +69,8 @@
         </div>
     </section>
     <!-- 푸터 -->
-    <jsp:include page="H&F/footer.html"/>
+    <jsp:include page="H&F/footer.jsp"/>
+    </div>
     <script src="js/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
