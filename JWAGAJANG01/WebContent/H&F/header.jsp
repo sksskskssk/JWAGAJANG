@@ -11,8 +11,7 @@ String id = (String)session.getAttribute("id");
 	<p>${id} 님 안녕하세요!</p>
 </div>
 </c:if>
-
-	<header id="top">   
+	<header>   
        <div class="headerwrap">
         <div class="logo">
           <a href="./Main.me"><img class="logo_img" src="img/logo.svg" alt="로고"></a>
