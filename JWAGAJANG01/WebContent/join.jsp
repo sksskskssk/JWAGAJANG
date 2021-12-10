@@ -172,7 +172,7 @@ function sample4_execDaumPostcode() {
   <script src="js/index.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="js/joinChk.js"></script>
+  <script src="js/join.js"></script>
   
 </body>
 </html>

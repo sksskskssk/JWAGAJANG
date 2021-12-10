@@ -1,10 +1,10 @@
-package board.dto;
+package notice.dto;
 
 import java.sql.Timestamp;
 
-public class BoardVO {
+public class NoticeVO {
 	private int notice_code;
-	private int notice_label;
+	private String notice_label;
 	private String notice_title;
 	private Timestamp notice_regdate;
 	private Timestamp notice_editdate;
@@ -18,10 +18,10 @@ public class BoardVO {
 	public void setNotice_code(int notice_code) {
 		this.notice_code = notice_code;
 	}
-	public int getNotice_label() {
+	public String getNotice_label() {
 		return notice_label;
 	}
-	public void setNotice_label(int notice_label) {
+	public void setNotice_label(String notice_label) {
 		this.notice_label = notice_label;
 	}
 	public String getNotice_title() {
@@ -54,8 +54,4 @@ public class BoardVO {
 	public void setNotice_count(int notice_count) {
 		this.notice_count = notice_count;
 	}
-	
-	
-	
-	
 }
