@@ -34,15 +34,31 @@ public class ControllerUsingURI extends HttpServlet {
 		String configFile = getInitParameter("configFile");
 		//Properties 객체는 Key와 Value를 쌍으로 저장하는데, 환경설정 정보가 저장된 .properties파일의 내용을 읽어들일 때 사용된다.
 		Properties prop = new Properties();
-		// commandHandler.properties 파일의 절대경로를 가져온다.
+		// 실제 WAS가 구동될때의 저장된 물리적 경로를 구한다.
+		// 실제 서버가 실행되는 물리적 경로는 workdirectory의 .metadata폴더 안에 위치한다.
 		String configFilePath = getServletContext().getRealPath(configFile);
+		//매개변수가 참조하는 값을 바이트스트림으로 읽기 위해 FileInputStream객체를 사용한다.
 		try (FileInputStream fis = new FileInputStream(configFilePath)){
-			prop.load(fis);
+			//properties객체를 이용하여 바이트스트림으로 읽은 properites의 물리적 경로를 불러온 것.
+			prop.load(fis);	
+			//properties에 저장한 key값을 getProperty로 출력하면 값이 나온다.
+			/*
+			 * System.out.println(prop.getProperty("/index.do"));
+			 * System.out.println(prop.getProperty("/noticeList.do"));
+			 */
 		} catch(IOException e) {
 			throw new ServletException(e);
 		}
-		
+		//keyset()은 map의 전체 값을 출력.
 		Iterator<Object> keyIter = prop.keySet().iterator();
+		
+		// KeyIter에 담겨져 있는 key와 value 값 전체 출력.
+		/*
+		 * while (keyIter.hasNext()) { Object key = keyIter.next(); Object value =
+		 * prop.get(key); System.out.println("[key]:" + key + ", [value]:" + value); }
+		 */
+		 
+		
 		while(keyIter.hasNext()) {
 			String command = (String)keyIter.next();
 			String handlerClassName = prop.getProperty(command);
@@ -50,6 +66,7 @@ public class ControllerUsingURI extends HttpServlet {
 			try {
 				Class<?> handlerClass = Class.forName(handlerClassName);
 				CommandHandler handlerInstance = (CommandHandler)handlerClass.newInstance(); // new ProductListHandler()
+				//properties에 저장된 키에맞는 값의 객체의 경로를 찾아 인스턴스화 시켜서 객체정보를 값으로 HashMap에 저장.
 				commandHandlerMap.put(command, handlerInstance);
 			} catch(ClassNotFoundException | InstantiationException | IllegalAccessException e) {
 				throw new ServletException(e);
