@@ -22,18 +22,18 @@
   <div class="container-fluid bg d-flex mt-3">
   	<div class="container d-flex justify-content-center" id="bg-white-join">
       
-      <form  method="post" action="./MemberJoinAction.me" name="fr" id="join">
+      <form  method="post" action="./MemberJoinAction.me">
         <h5 class="lfb" style="text-align: center; margin-top: 38px; font-size: 20px/23px;">회원가입</h5>
         <div class="container row d-flex mt-5" style="margin-top: 13px;">
           <div class="col-md-3 d-flex align-items-center">
             <label class="join-label-font">아이디</label>
           </div>
           <div class="col-md-7 d-flex align-items-center">
-            <input class="join-label-font lib lis py-3 ps-3 cfs" name="id" class="id" type="text" placeholder="아이디를 입력하세요." required autocomplete="off" onkeydown="inputIdChk">
+            <input class="join-label-font lib lis py-3 ps-3 cfs" name="id" class="id" type="text" placeholder="아이디를 입력하세요." autocomplete="off">
             <input type="hidden" name="idDuplication" value="idUncheck">
           </div>
           <div class="col-md-2 d-flex align-items-center">
-            <input class="join-button-font btn jbs cfs" type="button" value="중복확인" onclick="openIdChk">
+            <input class="join-button-font btn jbs cfs" type="button" value="중복확인">
           </div>
         </div>
         <div class="container row d-flex">
