@@ -109,8 +109,6 @@ public class MemberDAO {
 		if(rs.next()) {
 			if(id.equals(rs.getString("ID"))){
 				result = 1; //1이면 중복인 아이디
-			}else{
-				result = 0; //0이면 사용가능한 아이디
 			}
 		}
 		}catch(Exception e) {
@@ -120,4 +118,8 @@ public class MemberDAO {
 		}
 		return result;
 	}
+	
+	public int abcdefg(String id) {
+		return 0;
+	};
 }
