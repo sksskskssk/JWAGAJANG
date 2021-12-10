@@ -34,7 +34,7 @@
             <input class="join-label-font lib lis py-3 ps-3 cfs" name="id" class="id" type="text" placeholder="아이디를 입력하세요." required autocomplete="off">
           </div>
           <div class="col-md-2 d-flex align-items-center">
-            <input class="join-button-font btn jbs cfs" type="button" value="중복확인" class="dup" onclick="winopen()" required>
+            <input class="join-button-font btn jbs cfs" type="button" value="중복확인" class="dup"onClick="location.href='./MemberIdCheck.me'" required>
           </div>
         </div>
         <div class="container row d-flex">
@@ -91,14 +91,14 @@
           <div class="col-md-3 d-flex align-items-center">
           </div>
           <div class="col-md-7 d-flex align-items-center">
-            <input class="join-label-font lib lis py-3 ps-3 cfs" name="address3" type="text" id="sample4_jibunAddress" placeholder="지번 주소" required autocomplete="off">
+            <input class="join-label-font lib lis py-3 ps-3 cfs" name="address3" type="text" id="sample4_extraAddress" placeholder="참고 항목" required autocomplete="off">
           </div>
         </div>
         <div class="container row d-flex">
           <div class="col-md-3 d-flex align-items-center">
           </div>
           <div class="col-md-7 d-flex align-items-center">
-            <input class="join-label-font lib lis py-3 ps-3 cfs" name="address4" type="text" id="sample4_extraAddress" placeholder="참고 항목" required autocomplete="off">
+            <input class="join-label-font lib lis py-3 ps-3 cfs" name="address4" type="text" id="sample4_jibunAddress" placeholder="상세주소" required autocomplete="off">
           </div>
         </div>
 

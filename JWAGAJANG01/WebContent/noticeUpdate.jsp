@@ -15,7 +15,7 @@
 <title>좌가장 : 공지사항</title>
 </head>
 <body>
-<div id="pagewrap">
+<!-- 헤더영역   -->
   <jsp:include page="H&F/header.jsp"/>
 	<section>
 		<div class="pagenav">
@@ -23,43 +23,36 @@
 		</div>
 		<div class="notice">
 			<h1>공지사항</h1>
-			<form name="frm" method="post" action="noticeWrite.do">
+			<form name="frm" method="post" action="noticeUpdate.do">
 			<table class="brdWritebox">
 				<tr>
 					<th width="150px">구분</th>
 					<th>
-						<select class="sortinput" name="notice_label">
+						<select class="sortinput" name="sort">
 							<option>선택해주세요.</option>
 							<option>공지</option>
 							<option>이벤트</option>
 						</select>
-					</th>
 				</tr>
 				<tr>
 					<th width="150px">제목</th>
-					<th><input class="titleinput" type="text" name="notice_title"></th>
+					<th><input class="titleinput" type="text" name="sort" value="${board.notice_title}"></th>
 				</tr>
 				<tr>
 					<th id="textarea">본문</th>
-					<th><textarea style="resize: none;" name="notice_content"></textarea></th>
+					<th><textarea style="resize: none;" name="text">>${board.notice_content}</textarea></th>
 				</tr>
 			</table>
 			
 			<div class="noticeWritebtn">
-				<input type="reset" value="다시쓰기" name="reset" class="resetbtn">
-				<input type="submit" value="등록" name="send" class="sendbtn" onclick="return noticeCheck()">
+				<input type="submit" value="수정" name="send" class="sendbtn"  onclick="return noticeCheck()">
 				<input type="submit" value="목록" name="noticelist" class="noticelistbtn">
 			</div>
 			</form>
 		</div>
 	</section>
-<<<<<<< HEAD
-	<jsp:include page="H&F/footer.jsp"/>
-</div>
-=======
 	<!-- 푸터영역 -->
 	<jsp:include page="H&F/footer.html" />
->>>>>>> 583e12e98cf1571ab5264c0b61b951e6e2c809eb
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/index.js"></script>

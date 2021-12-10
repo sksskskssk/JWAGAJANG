@@ -95,4 +95,29 @@ public class MemberDAO {
 		}
 		return result;
 	}
+	
+	
+	
+	public int idDupCheck(String id) {
+		int result = -1; //-1이면 중복체크가 아직 안된것
+		try {
+			con = getCon();
+			sql = "select ID from user where ID=?";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, id);
+			rs = pstmt.executeQuery();
+		if(rs.next()) {
+			if(id.equals(rs.getString("ID"))){
+				result = 1; //1이면 중복인 아이디
+			}else{
+				result = 0; //0이면 사용가능한 아이디
+			}
+		}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			closeDB();
+		}
+		return result;
+	}
 }
