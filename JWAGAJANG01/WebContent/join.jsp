@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -22,25 +23,27 @@
   <div class="container-fluid bg d-flex mt-3">
   	<div class="container d-flex justify-content-center" id="bg-white-join">
       
-      <form  method="post" action="./MemberJoinAction.me" name="fr" id="join" onsubmit="return check();">
+      <form  method="post" action="./MemberJoinAction.me" autocomplete="off">
         <h5 class="lfb" style="text-align: center; margin-top: 38px; font-size: 20px/23px;">회원가입</h5>
+    
         <div class="container row d-flex mt-5" style="margin-top: 13px;">
           <div class="col-md-3 d-flex align-items-center">
             <label class="join-label-font">아이디</label>
           </div>
           <div class="col-md-7 d-flex align-items-center">
-            <input class="join-label-font lib lis py-3 ps-3 cfs" name="id" class="id" type="text" placeholder="아이디를 입력하세요." required autocomplete="off">
+            <input class="join-label-font lib lis py-3 ps-3 cfs" name="id" type="text" id="id" placeholder="아이디를 입력하세요.">
           </div>
           <div class="col-md-2 d-flex align-items-center">
-            <input class="join-button-font btn jbs cfs" type="button" value="중복확인" class="dup"onClick="location.href='./MemberIdCheck.me'" required>
+            <input class="join-button-font btn jbs cfs" type="button" id="duplicateCheck" value="중복확인" >
           </div>
+          
         </div>
         <div class="container row d-flex">
           <div class="col-md-3 d-flex align-items-center">
             <label class="join-label-font">비밀번호</label>
           </div>
           <div class="col-md-7 d-flex align-items-center">
-            <input class="join-label-font lib lis py-3 ps-3 cfs" name="password" type="password" placeholder="비밀번호를 입력하세요." required>
+            <input class="join-label-font lib lis py-3 ps-3 cfs" name="password" type="password" placeholder="비밀번호를 입력하세요.">
           </div>
         </div>
         <div class="container row d-flex">
@@ -48,7 +51,7 @@
             <label class="join-label-font">비밀번호 확인</label>
           </div>
           <div class="col-md-7 d-flex align-items-center">
-            <input class="join-label-font lib lis py-3 ps-3 cfs" name="passwordChk" type="password" placeholder="비밀번호를 한번 더 입력하세요." required>
+            <input class="join-label-font lib lis py-3 ps-3 cfs" name="passwordChk" type="password" placeholder="비밀번호를 한번 더 입력하세요.">
           </div>
         </div>
         <div class="container row d-flex">
@@ -56,7 +59,7 @@
             <label class="join-label-font">이메일</label>
           </div>
           <div class="col-md-7 d-flex align-items-center">
-            <input class="join-label-font lib lis py-3 ps-3 cfs" name="email" type="email" placeholder="이메일을 입력하세요." required autocomplete="off">
+            <input class="join-label-font lib lis py-3 ps-3 cfs" name="email" type="email" placeholder="이메일을 입력하세요." autocomplete="off">
           </div>
         </div>
         <div class="container row d-flex">
@@ -64,7 +67,7 @@
             <label class="join-label-font">연락처</label>
           </div>
           <div class="col-md-7 d-flex align-items-center">
-            <input class="join-label-font lib lis py-3 ps-3 cfs" name="contact" type="text" placeholder="연락처를 입력하세요." required autocomplete="off">
+            <input class="join-label-font lib lis py-3 ps-3 cfs" name="contact" type="text" placeholder="연락처를 입력하세요." autocomplete="off">
           </div>
         </div>
         <div class="container row d-flex">
@@ -72,7 +75,7 @@
             <label class="join-label-font">주소</label>
           </div>
           <div class="col-md-7 d-flex align-items-center">
-            <input class="join-label-font lib lis py-3 ps-3 cfs" id="sample4_postcode" name="address1" type="text" placeholder="우편번호" required autocomplete="off">
+            <input class="join-label-font lib lis py-3 ps-3 cfs" id="sample4_postcode" name="address1" type="text" placeholder="우편번호"  autocomplete="off">
           </div>
           <div class="col-md-2 d-flex align-items-center">
             <input class="join-button-font btn jbs cfs" type="button" value="주소찾기" onclick="sample4_execDaumPostcode()">
@@ -82,21 +85,21 @@
           <div class="col-md-3 d-flex align-items-center">
           </div>
           <div class="col-md-7 d-flex align-items-center">
-            <input class="join-label-font lib lis py-3 ps-3 cfs" name="address2" type="text" id="sample4_roadAddress" placeholder="도로명 주소" required autocomplete="off">
+            <input class="join-label-font lib lis py-3 ps-3 cfs" name="address2" type="text" id="sample4_roadAddress" placeholder="도로명 주소"  autocomplete="off">
           </div>
         </div>
         <div class="container row d-flex">
           <div class="col-md-3 d-flex align-items-center">
           </div>
           <div class="col-md-7 d-flex align-items-center">
-            <input class="join-label-font lib lis py-3 ps-3 cfs" name="address3" type="text" id="sample4_extraAddress" placeholder="참고 항목" required autocomplete="off">
+            <input class="join-label-font lib lis py-3 ps-3 cfs" name="address3" type="text" id="sample4_extraAddress" placeholder="참고 항목"  autocomplete="off">
           </div>
         </div>
         <div class="container row d-flex">
           <div class="col-md-3 d-flex align-items-center">
           </div>
           <div class="col-md-7 d-flex align-items-center">
-            <input class="join-label-font lib lis py-3 ps-3 cfs" name="address4" type="text" id="sample4_jibunAddress" placeholder="상세주소" required autocomplete="off">
+            <input class="join-label-font lib lis py-3 ps-3 cfs" name="address4" type="text" id="sample4_jibunAddress" placeholder="상세주소"  autocomplete="off">
           </div>
         </div>
 
@@ -171,7 +174,7 @@ function sample4_execDaumPostcode() {
   <script src="js/index.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="js/joinChk.js"></script>
+  <script src="js/join.js"></script>
   
 </body>
 </html>

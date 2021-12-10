@@ -28,7 +28,7 @@ public class MemberLoginAction implements Action {
 			resp.setContentType("text/html; charset=UTF-8");
 			PrintWriter out = resp.getWriter();
 			out.print("<script>");
-			out.print("alert('비밀번호오류');");
+			out.print("alert('비밀번호가 틀립니다.');");
 			out.print("history.back();");
 			out.print("</script>");
 			out.close();

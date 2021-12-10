@@ -4,6 +4,8 @@
 	<servlet>
 	<servlet-name>MemberFrontController</servlet-name>
 	<servlet-class>member.MemberFrontController</servlet-class>
+	
+	<load-on-startup>1</load-on-startup>
 	</servlet>
 	<servlet-mapping>
 	<servlet-name>MemberFrontController</servlet-name>
