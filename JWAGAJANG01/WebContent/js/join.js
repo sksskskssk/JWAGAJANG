@@ -86,6 +86,8 @@ $(function() {
 				if(data == "using") {	// id 존재
 					alert("이미 존재하는 아이디 입니다.");
 					passId = false;
+					$("#id").css("color", "red");
+					$("#idcheck").text("이미 존재하는 아이디 입니다!");
 				}
 				else {
 					alert("사용 가능한 아이디 입니다.");
