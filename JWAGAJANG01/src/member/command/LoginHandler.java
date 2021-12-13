@@ -1,6 +1,7 @@
 package member.command;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.naming.NamingException;
 import javax.servlet.http.HttpServletRequest;
@@ -27,7 +28,6 @@ public class LoginHandler implements CommandHandler {
 	}
 
 	private String processForm(HttpServletRequest req, HttpServletResponse res) {
-		
 		return "/member/login.jsp";
 	}
 
@@ -39,6 +39,7 @@ public class LoginHandler implements CommandHandler {
 		LoginService loginService = LoginService.getInstance();
 		Member member = loginService.login(id, password);
 		HttpSession session = req.getSession();
+
 		if(member != null) {
 			session.setAttribute("member", member);
 			session.setAttribute("id", id);

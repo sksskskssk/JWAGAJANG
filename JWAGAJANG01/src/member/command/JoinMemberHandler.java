@@ -1,6 +1,7 @@
 package member.command;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
@@ -39,8 +40,13 @@ public class JoinMemberHandler implements CommandHandler {
 		String email = req.getParameter("email");
 		Member member = new Member(id, pwd, mobile , email);
 		MemberService memberService = MemberServiceImpl.getInstance();
-		int result = memberService.add(member);
-		res.sendRedirect("/login.do?id=" + id);
+		memberService.add(member);
+		res.setContentType("text/html; charset=UTF-8");
+		PrintWriter writer;
+		writer = res.getWriter();
+		writer.println("<script>alert('회원가입을 축하드립니다!');</script>"); 
+		writer.println("<script>location.href=\"login.do?id="+id+"\";</script>");
+		writer.close();
 		return null;
 	}
 

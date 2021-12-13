@@ -1,5 +1,6 @@
 package member.service;
 
+import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.SQLException;
 
@@ -17,20 +18,20 @@ public class MemberServiceImpl implements MemberService {
 	private MemberServiceImpl() { }
 	
 	@Override
-	public int add(Member member) {
+	public void add(Member member) {
 		MemberDao mDao = MemberDao.getInstance();
 		Connection conn = null;
-		int result = -1;
+
 		try {
 			conn = DBManager.getConnection();
-			result = mDao.insert(conn, member);
+			mDao.insert(conn, member);
 		} catch (SQLException e) {
 			DBManager.rollback(conn);
 			throw new RuntimeException("DB 처리 오류:"+e.getMessage(), e);
 		} finally {
 			DBManager.close(conn);
 		}
-		return result;
+	
 	}
 	
 	@Override
