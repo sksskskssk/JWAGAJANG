@@ -15,7 +15,7 @@ String id = (String)session.getAttribute("id");
 	<header id="top">   
        <div class="headerwrap">
         <div class="logo">
-          <a href="./Main.me"><img class="logo_img" src="img/logo.svg" alt="로고"></a>
+          <a href="/index.do"><img class="logo_img" src="img/logo.svg" alt="로고"></a>
         </div>
         <form class="search">
           <input type="text" id="schText" name="schText"><input type="image" src="img/search.svg" id="schButton" name="schButton">
@@ -23,10 +23,10 @@ String id = (String)session.getAttribute("id");
         <nav>
           <ul class="gnbmy">
             <c:if test="${empty id}">
-            <li><a href="./MemberLogin.me">로그인</a></li>
+            <li><a href="/login.do">로그인</a></li>
             </c:if>
             <c:if test="${not empty id}">
-            <li><a href="./MemberLogout.me">로그아웃</a></li>
+            <li><a href="/logout.do">로그아웃</a></li>
             </c:if>
             <c:if test="${empty id}">
             <li><a href="./MemberLogin.me">장바구니</a></li>
@@ -35,7 +35,7 @@ String id = (String)session.getAttribute("id");
             <li><a href="#">장바구니</a></li>
             </c:if>
             <c:if test="${empty id}">
-            <li><a href="./MemberJoin.me">회원가입</a></li>
+            <li><a href="/join.do">회원가입</a></li>
             </c:if>
             <c:if test="${not empty id}">
             <li><a href="#">마이페이지</a></li>

@@ -1,9 +1,7 @@
-package main;
+package common.command;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import common.command.CommandHandler;
 
 public class MainHandler implements CommandHandler {
 	@Override

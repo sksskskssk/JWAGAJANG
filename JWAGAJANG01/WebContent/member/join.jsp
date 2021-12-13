@@ -22,7 +22,7 @@
   <div class="container-fluid bg d-flex mt-3">
   	<div class="container d-flex justify-content-center" id="bg-white-join">
       
-      <form  method="post" action="./MemberJoinAction.me">
+      <form  method="post" action="/join.do">
         <h5 class="lfb" style="text-align: center; margin-top: 38px; font-size: 20px/23px;">회원가입</h5>
         <div class="container row d-flex mt-5" style="margin-top: 13px;">
           <div class="col-md-3 d-flex align-items-center">
@@ -41,7 +41,7 @@
             <label class="join-label-font">비밀번호</label>
           </div>
           <div class="col-md-7 d-flex align-items-center">
-            <input class="join-label-font lib lis py-3 ps-3 cfs" name="password" type="password" placeholder="비밀번호를 입력하세요.">
+            <input class="join-label-font lib lis py-3 ps-3 cfs" name="pwd" type="password" placeholder="비밀번호를 입력하세요.">
           </div>
         </div>
         <div class="container row d-flex">
@@ -65,7 +65,7 @@
             <label class="join-label-font">연락처</label>
           </div>
           <div class="col-md-7 d-flex align-items-center">
-            <input class="join-label-font lib lis py-3 ps-3 cfs" name="contact" type="text" placeholder="연락처를 입력하세요."autocomplete="off">
+            <input class="join-label-font lib lis py-3 ps-3 cfs" name="mobile" type="text" placeholder="연락처를 입력하세요."autocomplete="off">
           </div>
         </div>
         <div class="container row d-flex">
@@ -73,7 +73,7 @@
             <label class="join-label-font">주소</label>
           </div>
           <div class="col-md-7 d-flex align-items-center">
-            <input class="join-label-font lib lis py-3 ps-3 cfs" id="sample4_postcode" name="address1" type="text" placeholder="우편번호" autocomplete="off">
+            <input class="join-label-font lib lis py-3 ps-3 cfs" id="sample4_postcode" type="text" placeholder="우편번호" autocomplete="off">
           </div>
           <div class="col-md-2 d-flex align-items-center">
             <input class="join-button-font btn jbs cfs" type="button" value="주소찾기" onclick="sample4_execDaumPostcode()">
@@ -83,21 +83,21 @@
           <div class="col-md-3 d-flex align-items-center">
           </div>
           <div class="col-md-7 d-flex align-items-center">
-            <input class="join-label-font lib lis py-3 ps-3 cfs" name="address2" type="text" id="sample4_roadAddress" placeholder="도로명 주소" autocomplete="off">
+            <input class="join-label-font lib lis py-3 ps-3 cfs" type="text" id="sample4_roadAddress" placeholder="도로명 주소" autocomplete="off">
           </div>
         </div>
         <div class="container row d-flex">
           <div class="col-md-3 d-flex align-items-center">
           </div>
           <div class="col-md-7 d-flex align-items-center">
-            <input class="join-label-font lib lis py-3 ps-3 cfs" name="address3" type="text" id="sample4_extraAddress" placeholder="참고 항목" autocomplete="off">
+            <input class="join-label-font lib lis py-3 ps-3 cfs" type="text" id="sample4_extraAddress" placeholder="참고 항목" autocomplete="off">
           </div>
         </div>
         <div class="container row d-flex">
           <div class="col-md-3 d-flex align-items-center">
           </div>
           <div class="col-md-7 d-flex align-items-center">
-            <input class="join-label-font lib lis py-3 ps-3 cfs" name="address4" type="text" id="sample4_jibunAddress" placeholder="상세주소" autocomplete="off">
+            <input class="join-label-font lib lis py-3 ps-3 cfs" type="text" id="sample4_jibunAddress" placeholder="상세주소" autocomplete="off">
           </div>
         </div>
 
