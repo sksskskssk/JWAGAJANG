@@ -14,16 +14,20 @@
 	<div id="pagewrap">
 	<jsp:include page="H&F/header.jsp"/>
 	<section>
-	<div class="pagenav">홈<span class="navarrow"></span>장바구니<span class="navarrow"></span>주문서 작성</div>
+	<div class="pagenav">홈<span class="navarrow"></span>장바구니<span class="navarrow"></span>주문완료</div>
 	<div id="completewrap">
 	<h1>주문완료</h1>
-    	<div class="cartnav">1. 장바구니<span class="navarrow"></span>
+    	<div class="compnav">1. 장바구니<span class="navarrow"></span>
     	2. 주문서 작성 / 결제<span class="navarrow"></span>
     	<span class="nowpage">3. 주문완료</span></div>
-	
+		<div class="completesec">
+			<h1>주문이 완료되었습니다.</h1>
+			<input type="button" class="chkmyorder" value="내 주문내역 확인" />
+		</div>
 	</div>
 	</section>
 	<jsp:include page="H&F/footer.jsp"/>
 	</div>
+	
 </body>
 </html>

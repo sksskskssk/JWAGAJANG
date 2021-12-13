@@ -26,7 +26,7 @@
     		<td>[민선지] 맛있는 채소주스 외 2건 </td>
     	</tr>
    		</table>
-    	<form action="#" class="orderform">
+    	<form action="#" class="orderform" name="orderfrm" method="post">
     	<table class="ordertable">
     		<tr>
     			<td>배송지 정보</td>
@@ -34,17 +34,17 @@
     		</tr>
     		<tr>
     			<td>수령인</td>
-    			<td><input type="text" /></td>
+    			<td><input type="text" name="name"/></td>
     		</tr>
     		<tr>
     			<td>휴대폰번호</td>
-    			<td><input type="text" /></td>
+    			<td><input type="text" name="phone" placeholder="'-' 포함 입력" /></td>
     		</tr>
     		<tr>
     			<td >주소</td>
-    			<td><input type="text" /><input type="button" value="우편번호 찾기" class="findpostnum"/><br />
-    			<input type="text" class="address"/><br />
-    			<input type="text" class="addDetail" /></td>
+    			<td><input type="text" id="postnum" placeholder="우편번호" readonly="readonly"/><input type="button" value="우편번호 찾기" class="findpostnum" onclick="execDaumPostcode()"/> <br />
+    			<input type="text" id="address" placeholder="주소" readonly="readonly"/><br />
+    			<input type="text" id="addDetail" placeholder="상세주소"/></td>
     		</tr>
     		<tr>
     			<td>배송요청사항</td>
@@ -57,5 +57,7 @@
 	</section>
 	<jsp:include page="H&F/footer.jsp"/>
 	</div>
+	<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+	<script src="js/order.js"></script>
 </body>
 </html>
