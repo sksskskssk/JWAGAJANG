@@ -43,8 +43,10 @@ public class MemberServiceImpl implements MemberService {
 			member = mch.checkExists(conn, id);
 		} catch (SQLException e) {
 			throw new RuntimeException("DB 처리 에러: " + e.getMessage(), e);
-		} catch (MemberNotFoundException e) {
+		} catch (MemberNotFoundException e) {  // 아무 처리도 하지 않음
 			
+		} catch (Exception e) {
+			e.printStackTrace();
 		} finally {
 			DBManager.close(conn);
 		}

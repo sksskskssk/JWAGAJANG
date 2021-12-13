@@ -50,6 +50,7 @@ public class MemberDao {
 			Member item = makeMemberFromResultSet(rs);
 			return item;
 		} finally {
+			System.out.println("rs : "+rs);
 			DBManager.close(rs);
 			DBManager.close(pstmt);
 		}

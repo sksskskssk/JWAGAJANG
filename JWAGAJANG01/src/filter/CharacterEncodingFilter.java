@@ -31,4 +31,10 @@ public class CharacterEncodingFilter implements Filter {
 		if(encoding == null)
 			encoding = "UTF-8";
 	}
+	@Override
+	public void destroy() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

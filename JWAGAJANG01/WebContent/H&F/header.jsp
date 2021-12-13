@@ -1,12 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<% 
-String id = (String)session.getAttribute("id");
-%>
 
-<c:set var="idchk" value="${id}" />
-<c:if test="${not empty id}">
+<c:if test="${sessionScope.id != null}}">
 <div class="loginInfoBox">
 	<p>${id} 님 안녕하세요!</p>
 </div>
@@ -22,22 +18,22 @@ String id = (String)session.getAttribute("id");
         </form>
         <nav>
           <ul class="gnbmy">
-            <c:if test="${empty id}">
+            <c:if test="${sessionScope.id == null}">
             <li><a href="/login.do">로그인</a></li>
             </c:if>
-            <c:if test="${not empty id}">
+            <c:if test="${sessionScope.id != null}">
             <li><a href="/logout.do">로그아웃</a></li>
             </c:if>
-            <c:if test="${empty id}">
+            <c:if test="${sessionScope.id == null}">
             <li><a href="./MemberLogin.me">장바구니</a></li>
             </c:if>
-            <c:if test="${not empty id}">
+            <c:if test="${sessionScope.id != null}">
             <li><a href="#">장바구니</a></li>
             </c:if>
-            <c:if test="${empty id}">
+            <c:if test="${sessionScope.id == null}">
             <li><a href="/join.do">회원가입</a></li>
             </c:if>
-            <c:if test="${not empty id}">
+            <c:if test="${sessionScope.id != null}">
             <li><a href="#">마이페이지</a></li>
             </c:if>
           </ul>

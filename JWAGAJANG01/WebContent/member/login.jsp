@@ -11,9 +11,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="img/favicon/favicon.ico">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/custom.css">
-  <link rel="stylesheet" href="css/header_footer.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/custom.css">
+  <link rel="stylesheet" href="../css/header_footer.css">
 
   <title>좌가장</title>
 </head>
@@ -36,10 +36,10 @@
 
   <!-- 푸터 -->
 <jsp:include page="../H&F/footer.html"/>
-  <script src="js/jquery.min.js"></script>
+  <script src="../js/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="js/index.js"></script>
+  <script src="../js/index.js"></script>
 
 </body>
 </html>
