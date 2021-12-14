@@ -22,14 +22,14 @@
   <div class="container-fluid bg d-flex mt-3">
   	<div class="container d-flex justify-content-center" id="bg-white-join">
       
-      <form  method="post" action="/join.do">
+      <form id="joinForm" method="post" action="/join.do">
         <h5 class="lfb" style="text-align: center; margin-top: 38px; font-size: 20px/23px;">회원가입</h5>
         <div class="container row d-flex mt-5" style="margin-top: 13px;">
           <div class="col-md-3 d-flex align-items-center">
             <label class="join-label-font">아이디</label>
           </div>
           <div class="col-md-7 d-flex align-items-center">
-            <input class="join-label-font lib lis py-3 ps-3 cfs" name="id" id="id" type="text" placeholder="아이디를 입력하세요." autocomplete="off">
+            <input class="join-label-font lib lis py-3 ps-3 cfs" name="id" id="id" type="text" placeholder="아이디를 입력해주세요." autocomplete="off">
           </div>
           <div class="col-md-2 d-flex align-items-center">
             <input class="join-button-font btn jbs cfs" type="button" id="duplicateCheck" value="중복확인">
@@ -43,7 +43,7 @@
             <label class="join-label-font">비밀번호</label>
           </div>
           <div class="col-md-7 d-flex align-items-center">
-            <input class="join-label-font lib lis py-3 ps-3 cfs" name="pwd" id="pwd" type="password" placeholder="비밀번호를 입력하세요.">
+            <input class="join-label-font lib lis py-3 ps-3 cfs" name="pwd" id="pwd" type="password" placeholder="비밀번호를 입력해주세요.">
           </div>
         </div>
         <p id="pwdcheck" style="margin-top:10px;"></p>
@@ -52,7 +52,7 @@
             <label class="join-label-font">비밀번호 확인</label>
           </div>
           <div class="col-md-7 d-flex align-items-center">
-            <input class="join-label-font lib lis py-3 ps-3 cfs" name="pwd2" id="pwd2" type="password" placeholder="비밀번호를 한번 더 입력하세요.">
+            <input class="join-label-font lib lis py-3 ps-3 cfs" name="pwd2" id="pwd2" type="password" placeholder="비밀번호를 확인해주세요.">
           </div>
         </div>
         <p id="pwd2check" style="margin-top:10px;"></p>
@@ -106,14 +106,14 @@
         </div>
 
         <div class="row d-flex justify-content-center">
-          <input class="lib btn btn-login cfs" style="margin-top: 27px;" type="submit" value="회원가입">
+          <input class="lib btn btn-login cfs" style="margin-top: 27px;" id="submit" type="submit" value="회원가입" >
         </div>
       </form>
   	</div>
   </div>
 
   <!-- 푸터 -->
-<jsp:include page="../H&F/footer.html"/>
+<jsp:include page="../H&F/footer.jsp"/>
   <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script>
 function sample4_execDaumPostcode() {
