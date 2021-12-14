@@ -2,11 +2,6 @@
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<c:if test="${sessionScope.id != null}}">
-<div class="loginInfoBox">
-	<p>${id} 님 안녕하세요!</p>
-</div>
-</c:if>
 	<header>   
        <div class="headerwrap">
         <div class="logo">
