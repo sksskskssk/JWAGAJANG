@@ -15,14 +15,9 @@
 <title>좌가장 : 공지사항</title>
 </head>
 <body>
-<<<<<<< HEAD
-<div id="pagewrap">
-  <jsp:include page="H&F/header.jsp"/>
-=======
 	<!-- 헤더영역    -->
 	<jsp:include page="H&F/header.jsp" />
 
->>>>>>> 583e12e98cf1571ab5264c0b61b951e6e2c809eb
 	<section>
 		<div class="pagenav">
 			홈<span class="navarrow"></span>게시판<span class="navarrow"></span>공지사항
@@ -33,19 +28,17 @@
 				<tr class="brdViewbox">
 					<th>${board.notice_label}</th>
 					<th>${board.notice_title}</th>
-					<th>${board.notice_regdate}</th>
+					<th><fmt:formatDate value="${board.notice_regdate}"/></th>
 					<th>${board.notice_count}</th>
 				</tr>
 				<tr>
-					<td><pre>${board.content}</pre></td>
+					<td class="content"><pre>${board.notice_content}</pre></td>
 				</tr>
 			</table>
 			<div class="list">
-				<input type="submit" value="수정" name="update" class="upbtn"
-					onclick="location.href='noticeWrite.do'"> <input
-					type="submit" value="삭제" name="delete" class="delbtn"> <input
-					type="submit" value="목록" name="list" class="listbtn"
-					onclick="location.href='noticeList.do'">
+				<input type="submit" value="수정" class="upbtn" onclick="location.href='noticeUpdate.do'">
+				<input type="submit" value="삭제" class="delbtn" onclick="location.href='noticeDelete.do'">
+				<input type="submit" value="목록" class="listbtn" onclick="location.href='noticeList.do'">
 			</div>
 		</div>
 		<div class="paging">
@@ -56,12 +49,7 @@
 				class="searchbtn" value="찾기" type="button">
 		</div>
 	</section>
-<<<<<<< HEAD
-	<jsp:include page="H&F/footer.jsp"/>
-</div>
-=======
 	<jsp:include page="H&F/footer.html" />
->>>>>>> 583e12e98cf1571ab5264c0b61b951e6e2c809eb
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/index.js"></script>

@@ -15,16 +15,9 @@
 <title>좌가장 : 공지사항</title>
 </head>
 <body>
-<<<<<<< HEAD
-<div id="pagewrap">
-<!-- 헤더영역 -->
-  <jsp:include page="H&F/header.jsp"/>
-<!-- 섹션 영역 -->
-=======
 	<!-- 헤더영역    -->
 	<jsp:include page="H&F/header.jsp" />
 	<!-- 섹션 영역 -->
->>>>>>> 583e12e98cf1571ab5264c0b61b951e6e2c809eb
 	<section>
 		<div class="pagenav">
 			홈<span class="navarrow"></span>게시판<span class="navarrow"></span>공지사항
@@ -40,10 +33,10 @@
 				</tr>
 				<c:forEach var="board" items="${noticeList}"> <!-- 내용이 있는거만큼 반복 -->
 					<tr class="record">
-						<td>${board.notice_label }</td>
-						<td><a href="view.do?num=${board.notice_label}"> ${board.notice_title } </a></td>
-						<td><fmt:formatDate value="${board.notice_regdate}" /></td>
-						<td>${board.notice_count}</td>
+						<td class="record_1">${board.notice_label }</td>
+						<td class="record_2"><a href="noticeView.do?notice_code=${board.notice_code}"> ${board.notice_title} </a></td>
+						<td class="record_3"><fmt:formatDate value="${board.notice_regdate}" /></td>
+						<td class="record_4">${board.notice_count}</td>
 					</tr>
 				</c:forEach>
 
@@ -56,22 +49,14 @@
 			<span class="prev"></span> <span class="next"></span>
 		</div>
 		<div class="noticeSrc">
-			<input class="searchtext" type="text" name="search"> <input
-				class="searchbtn" value="찾기" type="submit">
+			<input class="searchtext" type="text" name="search">
+			<input class="searchbtn" value="찾기" type="submit">
 		</div>
 	</section>
 	<!-- 푸터영역 -->
-<<<<<<< HEAD
-	<jsp:include page="H&F/footer.jsp"/>
-	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/index.js"></script>
-</div>
-=======
 	<jsp:include page="H&F/footer.html" />
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/index.js"></script>
->>>>>>> 583e12e98cf1571ab5264c0b61b951e6e2c809eb
 </body>
 </html>
