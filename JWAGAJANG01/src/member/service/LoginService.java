@@ -9,7 +9,7 @@ import member.dao.MemberDao;
 import member.model.Member;
 import util.DBManager;
 
-
+asdasdasdasdasdasdasdsd
 
 public class LoginService {
 	private static LoginService instance = new LoginService();
