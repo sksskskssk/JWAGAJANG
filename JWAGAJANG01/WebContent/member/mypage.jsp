@@ -27,7 +27,7 @@
       			<a class="nav-link mpa nf" href="mypage.do">회원 정보 수정</a>
       		</li>
       		<li class="nav-item">
-      			<a class="nav-link nf" href="#">주문내역</a>
+      			<a class="nav-link nf" href="mypageorder.do?id='"+${sessionScope.id}+"'">주문내역</a>
       		</li>
       		<li class="nav-item">
       			<a class="nav-link nf" href="#">찜목록</a>

@@ -5,10 +5,10 @@
 	<header>   
        <div class="headerwrap">
         <div class="logo">
-          <a href="/index.do"><img class="logo_img" src="img/logo.svg" alt="로고"></a>
+          <a href="/index.do"><img class="logo_img" src="../img/logo.svg" alt="로고"></a>
         </div>
         <form class="search">
-          <input type="text" id="schText" name="schText"><input type="image" src="img/search.svg" id="schButton" name="schButton">
+          <input type="text" id="schText" name="schText"><input type="image" src="../img/search.svg" id="schButton" name="schButton">
         </form>
         <nav>
           <ul class="gnbmy">
@@ -36,7 +36,7 @@
         </nav>
         <nav>
           <ul class=gnb>
-            <li class="gnb_li"><a href="#" class="ctgry"><img src="img/allctgrybtn.svg" style="height: 12px;">  전체상품</a>
+            <li class="gnb_li"><a href="#" class="ctgry"><img src="../img/allctgrybtn.svg" style="height: 12px;">  전체상품</a>
               <table class="lnb">
                 <tr class="lnb_tr"><th class="lnb_th">채소·과일</th></tr>
                   <tr><td class="lnb_td"><a href="#">고구마·감자·당근</a></td></tr>
