@@ -192,3 +192,17 @@
 	height: 110px;
 }
 
+.pager{
+	text-decoration: none;
+	margin-right: 1.5px;
+	margin-left: 1.5px;
+}
+
+.m0 {
+	padding:0;
+}
+
+.highlight {
+	font-weight: bold;
+}
+

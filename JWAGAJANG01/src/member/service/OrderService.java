@@ -16,13 +16,24 @@ public class OrderService {
 	private OrderService() {
 	}
 	
-	public List<Order> getOrderList(String id) {
+	public List<Order> getOrderList(String id,String page) {
 		OrderDao oDao = OrderDao.getInstance();
 		Connection conn = null;
 		
 		conn = DBManager.getConnection();
 		
-		return oDao.select(conn,id);
 		
+		return oDao.select(conn,id,page);
+		
+	}
+	
+	public int getCount(String id) {
+		OrderDao oDao = OrderDao.getInstance();
+		Connection conn = null;
+		
+		conn = DBManager.getConnection();
+		
+		
+		return oDao.count(conn, id);
 	}
 }

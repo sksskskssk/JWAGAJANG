@@ -14,21 +14,23 @@ import member.model.Order;
 import member.service.MemberService;
 import member.service.MemberServiceImpl;
 import member.service.OrderService;
+import util.DBManager;
 
 public class MyPageOrderHandler implements CommandHandler{
 	@Override
 	public String process(HttpServletRequest req, HttpServletResponse res) throws Exception {
 		HttpSession session = req.getSession();
 		String id = (String)session.getAttribute("id");
+		String page = req.getParameter("p");
 		System.out.println(session.getAttribute("id")); //session에 저장된 id값 확인 OK
 		
 		
 		OrderService os = OrderService.getInstance();
-		List<Order> orderlist = os.getOrderList(id);
-		
-		System.out.println(orderlist.toString());
+		List<Order> orderlist = os.getOrderList(id,page);
+		int count = os.getCount(id);
 		
 		req.setAttribute("orderlist", orderlist);
+		req.setAttribute("count", count);
 		
 		
 	
