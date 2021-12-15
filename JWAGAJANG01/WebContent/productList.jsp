@@ -67,7 +67,7 @@
                             <table class="productListtable">
                                 <colgroup>
                                     <col style="width: 300px; height:300px;">
-                                    <col style="width: 1300px; height:300px;">
+                                    <col style="width: 900px; height:300px;">
                                     <col style="width: 200px; height:300px;">
                                     <col style="width: 400px; height:300px;">
                                     <col style="width: 400px; height:300px;">
