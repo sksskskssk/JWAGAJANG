@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 import javax.naming.NamingException;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -44,11 +45,18 @@ public class LoginHandler implements CommandHandler {
 			session.setAttribute("member", member);
 			session.setAttribute("id", id);
 			res.sendRedirect("/index.do");
+			
 			System.out.println("로그인 성공");
 		}//로그인실패시
 		else {
 			viewPage = "/member/login.jsp";
 			System.out.println("로그인 실패");
+			res.setContentType("text/html; charset=UTF-8");
+			PrintWriter writer;
+			writer = res.getWriter();
+			writer.println("<script>alert('아이디 혹은 비밀번호를 확인해주세요');</script>"); 
+			writer.println("<script>location.href=\"/login.do\";</script>");
+			writer.close();
 		}
 		return viewPage;
 	}
